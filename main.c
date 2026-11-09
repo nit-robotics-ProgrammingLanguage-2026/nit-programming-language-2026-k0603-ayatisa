@@ -4,9 +4,11 @@ int main(void)
 {
     int n;
     int i;
-    int sum = 0;
+    long sum = 0; // 型を long に変更
     
-    scanf("%d", &n);
+    if (scanf("%d", &n) != 1) {
+        return 0;
+    }
     
     if (n < 0)
     {
@@ -19,6 +21,6 @@ int main(void)
         sum += i;
     }
     
-    printf("%d", sum);
+    printf("%ld", sum); // 出力も %ld に変更
     return 0;
 }
